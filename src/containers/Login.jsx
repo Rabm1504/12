@@ -3,20 +3,20 @@ import '../styles/Login.scss';
 
 const Login = () => {
 	return (
-		<div class="box">
-            <h2>Login</h2>
-            <form>
-            <div className="inputBox">
-                <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value=""/>
-                <label>Username</label>
-            </div>
-            <div className="inputBox">
-                <input type="password" name="password" required value="" onkeyup="this.setAttribute('value', this.value);" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
-                <label>Password</label>
-            </div>
-            <input type="submit" name="sign-in" value="Sign In"/>
-            </form>
-        </div>
+		<div className="login">
+			<div className="form-container">
+				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<h1 className="title">Create a new password</h1>
+				<p className="subtitle">Enter a new passwrd for yue account</p>
+				<form action="/" className="form">
+					<label for="password" className="label">Password</label>
+					<input type="password" id="password" placeholder="*********" className="input input-password" />
+					<label for="new-password" className="label">Password</label>
+					<input type="password" id="new-password" placeholder="*********" className="input input-password" />
+					<input type="submit" value="Confirm" className="primary-button login-button" />
+				</form>
+			</div>
+		</div>
 	);
 }
 
